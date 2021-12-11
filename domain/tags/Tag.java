@@ -21,12 +21,11 @@ public interface Tag extends Serializable {
 	 */
 	Iterator<SetEntry<String, Show>> showsIterator();
 	/**
-	*
-	*
-	*
-	*/
+	 * Checks if the tag has any shows associated.
+	 * 
+	 * @return - <code>true</code>, if the yag has associated shows;
+	 *         <code>false</code>, otherwise.
+	 */
 	boolean hasTaggedShows();
-
-	boolean hasShow();
 
 }
