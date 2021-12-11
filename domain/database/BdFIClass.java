@@ -192,7 +192,7 @@ public class BdFIClass implements BdFI {
 			oneTag.removeShow(oneShow.getShowTitle());
 			// If the show was the only one asociated with the tag, removes it from the
 			// dataBase
-			if (!oneTag.hasShow())
+			if (!oneTag.hasTaggedShows())
 				tags.remove(oneTag.getTag().toUpperCase());
 		}
 		Iterator<SetPerson> itPerson = oneShow.personIterator();
