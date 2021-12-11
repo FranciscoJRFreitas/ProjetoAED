@@ -20,8 +20,8 @@ public interface SetPerson extends Person {
 	/**
 	 * Removes a show that the person has participated in.
 	 * 
-	 * @param oneShow - the show in the system.
+	 * @param idShow - the show identifier.
 	 */
-	void removeShow(Show oneShow);
+	void removeShow(String idShow);
 
 }
