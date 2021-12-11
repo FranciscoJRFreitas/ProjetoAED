@@ -188,7 +188,7 @@ public interface BdFI extends Serializable {
 			throws IdShowDoesNotExistException, ShowHasNoParticipationsException;
 
 	/**
-	 * Returns the show with better average rating in the system.
+	 * Returns the shows with the best average rating in the system.
 	 * 
 	 * @return - the best show in the system.
 	 * @throws NoShowsException         - Exception thrown when there are no shows
@@ -202,7 +202,7 @@ public interface BdFI extends Serializable {
 			throws NoShowsException, NoFinishedShowsException, NoRatedShowsException;
 
 	/**
-	 * Returns the shows with the given rating.
+	 * Returns all the shows with the given rating.
 	 * 
 	 * @param rate - 0 to 10 classification.
 	 * @return - show with the requested rating.
