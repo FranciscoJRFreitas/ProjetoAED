@@ -15,7 +15,8 @@ import domain.participations.*;
  *
  */
 public class BdFIClass implements BdFI {
-
+	//Class Constants
+	
 	/**
 	 * Serial Version UID
 	 */
