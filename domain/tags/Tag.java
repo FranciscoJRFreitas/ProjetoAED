@@ -5,7 +5,13 @@ import java.io.Serializable;
 import dataStructures.Iterator;
 import dataStructures.SetEntry;
 import domain.shows.Show;
-
+/**
+ * Interface that represents the tag object and is responsible to comunicate
+ * to the user.
+ * 
+ * @author Danny Fernandes / Francisco Freitas
+ *
+ */
 public interface Tag extends Serializable {
 	/**
 	*Gives the tag name.
