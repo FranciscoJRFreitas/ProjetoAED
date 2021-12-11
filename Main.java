@@ -21,7 +21,7 @@ import domain.tags.Tag;
  * Main class for the application. Containing all the communication between the
  * user and the application.
  * 
- * AED 2021 - First Project - BdFI.
+ * AED 2021 - First Project - BdFI. Estou a alterar o projeto
  * 
  * @author Danny Fernandes 61162
  * @author Francisco Freitas 60313
