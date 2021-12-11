@@ -17,6 +17,11 @@ public interface SetPerson extends Person {
 	 */
 	void addParticipatedShow(Show oneShow);
 	
+	/**
+	 * Removes a show that the person has participated in.
+	 * 
+	 * @param oneShow - the show in the system.
+	 */
 	void removeShow(Show oneShow);
 
 }
