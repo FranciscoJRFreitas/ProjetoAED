@@ -65,6 +65,9 @@ public class ShowClass implements SetShow {
 	 */
 	private List<Participation> participations;
 	
+	/**
+	*List with all current persons participating in the show.
+	*/
 	private List<SetPerson> persons;
 
 	/**
@@ -91,15 +94,22 @@ public class ShowClass implements SetShow {
 	 * the show s production year.
 	 * 
 	 * @param productionYear - show s production year.
-	 * @return -<code>true</code>, if the show is in production; <code>false</code>,
+	 * @return - <code>true</code>, if the show is in production; <code>false</code>,
 	 *         otherwise.
 	 */
 	private boolean isInProduction(int productionYear) {
 		return productionYear == Year.now().getValue();
 	}
 	
+	/**
+	*Checks if the tag is already associated with this show.
+	*
+	*@param tag - tag to find.
+	*@return - <code>true</code>, if the tag is already associated with the show, <code>false</code>,
+	*	otherwise.
+	*/
 	private boolean hasTag(String tag) {
-		return tags.find(tag) == -1;
+		return tags.find(tag) != -1;
 	}
 
 	@Override
@@ -145,7 +155,7 @@ public class ShowClass implements SetShow {
 
 	@Override
 	public void addTag(String tag) {
-		if (hasTag(tag))
+		if (!hasTag(tag))
 			tags.addLast(tag);
 	}
 
