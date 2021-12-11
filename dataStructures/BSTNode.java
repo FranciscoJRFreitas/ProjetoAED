@@ -62,7 +62,7 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Returns the entry (key and value) of the current node.
 	 * 
-	 * @return
+	 * @return entry - entry stored in the current node.
 	 */
 	public EntryClass<K, V> getEntry() {
 		return entry;
@@ -71,7 +71,7 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Returns the key of the current node.
 	 * 
-	 * @return
+	 * @return key - key of the current node.
 	 */
 	public K getKey() {
 		return entry.getKey();
@@ -80,7 +80,7 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Returns the value of the current node.
 	 * 
-	 * @return
+	 * @return value - value of the current node.
 	 */
 	public V getValue() {
 		return entry.getValue();
@@ -89,7 +89,7 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Returns the left child node of the current node.
 	 * 
-	 * @return
+	 * @return - leftChild - left child of the current node.
 	 */
 	public BSTNode<K, V> getLeft() {
 		return leftChild;
@@ -98,16 +98,16 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Returns the right child node of the current node.
 	 * 
-	 * @return
+	 * @return - rigthChild - right child of the current node.
 	 */
 	public BSTNode<K, V> getRight() {
 		return rightChild;
 	}
 
 	/**
-	 * Assigns a new entry (key and value) to the current BST node
+	 * Assigns a new entry (key and value) to the current BST node.
 	 * 
-	 * @param newEntry
+	 * @param newEntry - entry to be set in the current BST node.
 	 */
 	public void setEntry(EntryClass<K, V> newEntry) {
 		entry = newEntry;
@@ -116,8 +116,8 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Assigns new a key and value to the current BST node
 	 * 
-	 * @param newKey
-	 * @param newValue
+	 * @param newKey - Key to be set in the current entry.
+	 * @param newValue - Value to be set in the current entry.
 	 */
 	public void setEntry(K newKey, V newValue) {
 		entry.setKey(newKey);
@@ -127,7 +127,7 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Sets the new key of the current node.
 	 * 
-	 * @param newKey
+	 * @param newKey - Key to be set in the current entry.
 	 */
 	public void setKey(K newKey) {
 		entry.setKey(newKey);
@@ -136,7 +136,7 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Sets the new value object of the current node.
 	 * 
-	 * @param newValue
+	 * @param newValue - Value to be set in the current entry.
 	 */
 	public void setValue(V newValue) {
 		entry.setValue(newValue);
@@ -145,7 +145,7 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Sets the new left child node of the this node
 	 * 
-	 * @param newLeft the new left child node of the current node
+	 * @param newLeft - the new left child node of the current node
 	 */
 	public void setLeft(BSTNode<K, V> newLeft) {
 		leftChild = newLeft;
@@ -154,16 +154,16 @@ public class BSTNode<K, V> implements Serializable {
 	/**
 	 * Sets the new right child node of the this node
 	 * 
-	 * @param newLeft the new right child node of the current node
+	 * @param newRight - the new right child node of the current node
 	 */
 	public void setRight(BSTNode<K, V> newRight) {
 		rightChild = newRight;
 	}
 
 	/**
-	 * Returns true if the node is a leaf.
+	 * Returns true if the node is a leaf; false, otherwise.
 	 * 
-	 * @return
+	 * @return - if the node is a leaf.
 	 */
 	public boolean isLeaf() {
 		return leftChild == null && rightChild == null;
