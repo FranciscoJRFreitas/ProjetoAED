@@ -15,6 +15,9 @@ public class SepChainHashTable<K extends Comparable<K>, V> extends HashTable<K, 
 	 */
 	static final long serialVersionUID = 0L;
 
+	/**
+	 * Integer constant that defines the SepChainHashTable growth, when resizing.
+	 */
 	private static final int GROWTH_FACTOR = 2;
 
 	/**
@@ -69,6 +72,9 @@ public class SepChainHashTable<K extends Comparable<K>, V> extends HashTable<K, 
 		return val;
 	}
 
+	/**
+	 * Rehashes the elements when a resize is made.
+	 */
 	private void rehash() {
 		SepChainHashTable<K, V> newHashTable = new SepChainHashTable<K, V>(table.length * GROWTH_FACTOR);
 		Iterator<SetEntry<K, V>> it = this.iterator();
