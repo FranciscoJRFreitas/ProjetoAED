@@ -36,7 +36,10 @@ public class BdFIClass implements BdFI {
 	 * int with the maximum valid show rating.
 	 */
 	private static final int MAX_VALID_RATING = 10;
-
+	
+	/**
+	 * number of valids rating.
+	 */
 	private static final int RATING_OPTIONS = 11;
 
 	// Class variables
