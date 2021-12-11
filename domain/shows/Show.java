@@ -89,7 +89,12 @@ public interface Show extends Serializable {
 	 *         if not.
 	 */
 	boolean isRated();
-
+	
+	/**
+	 * Returns an iterator of all persons that are associated with the show.
+	 * 
+	 * @return - Person iterator with all show s persons.
+	 */
 	Iterator<SetPerson> personIterator();
 
 	
