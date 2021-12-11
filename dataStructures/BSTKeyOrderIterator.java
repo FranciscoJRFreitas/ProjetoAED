@@ -1,5 +1,14 @@
 package dataStructures;
 
+/**
+ * BSTKeyOrderIterator implementation
+ * 
+ * @author Danny Fernandes / Francisco Freitas
+ * @version 1.0
+ *
+ * @param <K> Generic type Key
+ * @param <V> Generic type Value
+ */
 public class BSTKeyOrderIterator<K, V> implements Iterator<SetEntry<K, V>> {
 
 	private static final long serialVersionUID = 0L;
