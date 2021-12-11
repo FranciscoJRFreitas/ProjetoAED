@@ -54,7 +54,7 @@ public class PersonClass implements SetPerson {
 	private String gender;
 
 	/**
-	 * A set of shows that the person participates in;
+	 * A set of shows that the person participates in.
 	 */
 	private OrderedDictionary<String, Show> shows;
 
@@ -124,8 +124,8 @@ public class PersonClass implements SetPerson {
 	}
 
 	@Override
-	public void removeShow(Show oneShow) {
-		shows.remove(oneShow.getIdShow());
+	public void removeShow(String idShow) {
+		shows.remove(idShow);
 	}
 
 	
