@@ -37,7 +37,10 @@ public class BdFIClass implements BdFI {
 	 * int with the maximum valid show rating.
 	 */
 	private static final int MAX_VALID_RATING = 10;
-
+	
+	/**
+	* number of valid ratings.
+	*/
 	private static final int RATING_OPTIONS = 11;
 
 	// Class variables
@@ -223,7 +226,7 @@ public class BdFIClass implements BdFI {
 		}
 		Iterator<SetPerson> itPerson = oneShow.personIterator();
 		while (itPerson.hasNext()) {
-			itPerson.next().removeShow(oneShow);
+			itPerson.next().removeShow(oneShow.getIdShow());
 		}
 		shows.remove(idShow.toUpperCase());
 	}
