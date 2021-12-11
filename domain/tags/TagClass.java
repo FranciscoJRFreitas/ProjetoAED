@@ -11,9 +11,13 @@ public class TagClass implements SetTag {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	/**
+	*The name of the tag.
+	*/
 	private String tagName;
-
+	/**
+	*A dictionary that links the title of the show to a show object.
+	*/
 	private OrderedDictionary<String, Show> shows;
 
 	public TagClass(String tagName) {
