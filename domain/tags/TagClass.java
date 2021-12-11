@@ -15,6 +15,9 @@ public class TagClass implements SetTag {
 	 * Serial version ID.
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	// Class variables
+	
 	/**
 	*The name of the tag.
 	*/
