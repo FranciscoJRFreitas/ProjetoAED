@@ -23,7 +23,7 @@ public interface Tag extends Serializable {
 	/**
 	 * Checks if the tag has any shows associated.
 	 * 
-	 * @return - <code>true</code>, if the yag has associated shows;
+	 * @return - <code>true</code>, if the tag has associated shows;
 	 *         <code>false</code>, otherwise.
 	 */
 	boolean hasTaggedShows();
