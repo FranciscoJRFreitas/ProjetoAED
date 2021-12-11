@@ -368,7 +368,7 @@ public class Main {
 	}
 
 	/**
-	 * Lists every show the person has participated in.
+	 * Lists every shows that the person has participated in.
 	 * 
 	 * @param in   - Scanner object.
 	 * @param iMDb - BdFI object.
@@ -390,7 +390,7 @@ public class Main {
 	}
 
 	/**
-	 * Lists every participation of a show.
+	 * Lists every participations of a given show.
 	 * 
 	 * @param in   - Scanner object.
 	 * @param iMDb - BdFI object.
@@ -439,7 +439,7 @@ public class Main {
 	}
 
 	/**
-	 * Lists every show with the given average rating.
+	 * Lists every shows with the given average rating.
 	 * 
 	 * @param in   - Scanner object.
 	 * @param iMDb - BdFI object.
@@ -470,7 +470,7 @@ public class Main {
 	}
 
 	/**
-	 * Lists every show with the given tag.
+	 * Lists every shows with the given tag.
 	 * 
 	 * @param in   - Scanner object.
 	 * @param iMDb - BdFI object.
