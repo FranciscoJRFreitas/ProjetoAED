@@ -15,11 +15,16 @@ public interface Tag extends Serializable {
 	String getTag();
 	
 	/**
+	 * Returns an iterator of all entries of shows associated with this tag.
+	 * 
+	 * @return - Show iterator with all tag s shows.
+	 */
+	Iterator<SetEntry<String, Show>> showsIterator();
+	/**
+	*
 	*
 	*
 	*/
-	Iterator<SetEntry<String, Show>> showsIterator();
-
 	boolean hasTaggedShows();
 
 	boolean hasShow();
