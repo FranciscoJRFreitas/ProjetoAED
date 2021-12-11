@@ -19,7 +19,13 @@ public class TagClass implements SetTag {
 	*A dictionary that links the title of the show to a show object.
 	*/
 	private OrderedDictionary<String, Show> shows;
-
+	
+	
+	/**
+	 * TagClass constructor.
+	 * 
+	 * @param tagName - tag identifier.
+	 */
 	public TagClass(String tagName) {
 		this.tagName = tagName;
 		shows = new BinarySearchTree<String, Show>();
