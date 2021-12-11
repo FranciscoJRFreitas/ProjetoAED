@@ -11,14 +11,46 @@ package dataStructures;
  */
 public class BSTKeyOrderIterator<K, V> implements Iterator<SetEntry<K, V>> {
 
+	/**
+	 * Serial Version UID of the Class.
+	 */
 	private static final long serialVersionUID = 0L;
+	
+	/**
+	 * Number of entries in the tree.
+	 * 
+	 */
 	private BSTNode<K, V> current;
+	
+	/**
+	 * The rightmost element.
+	 * 
+	 */
 	private BSTNode<K, V> maxRight;
+	
+	/**
+	 * The root of the tree.
+	 * 
+	 */
 	private BSTNode<K, V> root;
+	
+	/**
+	 * The current element has a next element to iterate.
+	 * 
+	 */
 	private boolean hasNext;
 
+	/**
+	 * A stack structure to help iterate the three.
+	 * 
+	 */
 	private Stack<BSTNode<K, V>> stack;
 
+	/**
+	 * Constructor for BTSKeyOrderIterator - creates an empty tree.
+	 * 
+	 * @param node - The starting node (root) to the three.
+	 */
 	public BSTKeyOrderIterator(BSTNode<K, V> node) {
 		root = node;
 		maxRight = node;
