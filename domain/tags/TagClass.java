@@ -42,11 +42,6 @@ public class TagClass implements SetTag {
 	public String getTag() {
 		return tagName;
 	}
-	
-	@Override
-	public boolean hasShow() {
-		return !shows.isEmpty();
-	}
 
 	@Override
 	public void addShowWithTag(Show show) {
