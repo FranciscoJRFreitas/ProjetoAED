@@ -5,10 +5,12 @@ import dataStructures.Iterator;
 import dataStructures.OrderedDictionary;
 import dataStructures.SetEntry;
 import domain.shows.Show;
-
+/**
+*Class that represents a tag in database.
+*/
 public class TagClass implements SetTag {
 	/**
-	 * 
+	 * Serial version ID.
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
