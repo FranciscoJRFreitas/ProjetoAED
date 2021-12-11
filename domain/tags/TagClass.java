@@ -7,6 +7,8 @@ import dataStructures.SetEntry;
 import domain.shows.Show;
 /**
 *Class that represents a tag in database.
+*
+* @author Danny Fernandes / Francisco Freita
 */
 public class TagClass implements SetTag {
 	/**
