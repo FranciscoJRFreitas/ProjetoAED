@@ -15,18 +15,17 @@ import domain.participations.*;
  *
  */
 public class BdFIClass implements BdFI {
-	//Class Constants
-	
+	// Class Constants
+
 	/**
 	 * Serial Version UID
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
 	 * int with the minimum invalid year.
 	 */
 	private static final int MIN_INVALID_YEAR = 0;
-	
 
 	/**
 	 * int with the minimum valid show rating.
@@ -37,10 +36,7 @@ public class BdFIClass implements BdFI {
 	 * int with the maximum valid show rating.
 	 */
 	private static final int MAX_VALID_RATING = 10;
-	
-	/**
-	* number of valid ratings.
-	*/
+
 	private static final int RATING_OPTIONS = 11;
 
 	// Class variables
@@ -50,30 +46,31 @@ public class BdFIClass implements BdFI {
 	 * system.
 	 */
 	private Dictionary<String, SetPerson> persons;
-	
+
 	/**
 	 * Dictionary that links an idShow to the specific show object in the system.
 	 */
 	private Dictionary<String, SetShow> shows;
-	
+
 	/**
-	 * OrderedDictionary array that each position matches with the rating of the shows in the BinarySearchTree.
+	 * OrderedDictionary array that each position matches with the rating of the
+	 * shows in the BinarySearchTree.
 	 */
 	private OrderedDictionary<String, Show>[] showsByRating;
-	
+
 	/**
-	* Dictionary that links a tag name to a tag object.
-	*/
+	 * Dictionary that links a tag name to a tag object.
+	 */
 	private Dictionary<String, SetTag> tags;
-	
+
 	/**
-	* Variable to know how many finished shows are in the system.
-	*/
+	 * Variable to know how many finished shows are in the system.
+	 */
 	private int finishedShowsCounter;
 
 	/**
-	*Variable to know how many rated shows are in the system.
-	*/
+	 * Variable to know how many rated shows are in the system.
+	 */
 	private int ratedShowsCounter;
 
 	/**
@@ -89,27 +86,31 @@ public class BdFIClass implements BdFI {
 		finishedShowsCounter = 0;
 		ratedShowsCounter = 0;
 	}
+
 	/**
-	*Initializes every position (10) of the array with BinarySearchTree that links a String id to a show object.
-	*/
+	 * Initializes every position (10) of the array with BinarySearchTree that links
+	 * a String id to a show object.
+	 */
 	private void initialize() {
 		for (int i = 0; i < showsByRating.length; i++) {
 			showsByRating[i] = new BinarySearchTree<String, Show>();
 		}
 	}
-	
+
 	/**
-	*Checks if exists any rated show in the system.
-	*@return - <code>true</code>, if exists, <code>false</code>, otherwise.
-	*/
+	 * Checks if exists any rated show in the system.
+	 * 
+	 * @return - <code>true</code>, if exists, <code>false</code>, otherwise.
+	 */
 	private boolean hasRatedShows() {
 		return ratedShowsCounter > 0;
 	}
-	
+
 	/**
-	*Checks if exists any finished production in the system.
-	*@return - <code>true</code>, if exists, <code>false</code>, otherwise.
-	*/
+	 * Checks if exists any finished production in the system.
+	 * 
+	 * @return - <code>true</code>, if exists, <code>false</code>, otherwise.
+	 */
 	private boolean hasFinishedProductions() {
 		return finishedShowsCounter > 0;
 	}
@@ -290,16 +291,17 @@ public class BdFIClass implements BdFI {
 			throw new IdShowDoesNotExistException();
 		if (oneShow.isInProduction())
 			throw new ShowInProductionException();
-		if (!oneShow.isRated() && stars == 0){
+		if (!oneShow.isRated() && stars == 0) {
 			showsByRating[stars].insert(idShow, oneShow);
-		}else{
-		int oldRate = oneShow.getShowAverage();
-		oneShow.rate(stars);
-		int newRate = oneShow.getShowAverage();
-		if (oldRate != newRate) {
-			showsByRating[oldRate].remove(idShow);
-			showsByRating[newRate].insert(idShow, oneShow);
-		}
+			oneShow.rate(stars);
+		} else {
+			int oldRate = oneShow.getShowAverage();
+			oneShow.rate(stars);
+			int newRate = oneShow.getShowAverage();
+			if (oldRate != newRate) {
+				showsByRating[oldRate].remove(idShow);
+				showsByRating[newRate].insert(idShow, oneShow);
+			}
 		}
 		ratedShowsCounter++;
 	}
